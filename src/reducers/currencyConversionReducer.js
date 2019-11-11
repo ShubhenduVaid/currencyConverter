@@ -31,7 +31,7 @@ export default function currencyConvertorReducer(state = initialState, action) {
     case LOAD_CURRENCYCONVERSION_SUCCESS: {
       return {
         ...state,
-        data: action.data,
+        data: action.response.data,
         loading: false
       };
     }
