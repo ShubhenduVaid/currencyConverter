@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import configureStore from './store';
 import "./index.css";
-import CurrencyConvertor from "./CurrencyConvertor";
+import CurrencyConvertor from "./currencyConvertor";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(

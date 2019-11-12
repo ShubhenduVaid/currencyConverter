@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check CurrencyRate component snapshots CurrencyRate component snapshot 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }
+>
+  <p
+    style={
+      Object {
+        "color": "#00b9ff",
+        "fontSize": "larger",
+        "fontStyle": "italic",
+        "textAlign": "center",
+      }
+    }
+  >
+    1 undefined = 1 undefined
+  </p>
+</div>
+`;

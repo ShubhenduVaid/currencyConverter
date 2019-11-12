@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import CurrencyInputField from "./CurrencyInputField";
-import CurrencySelector from "./CurrencySelector";
-import CurrencyRate from "./CurrencyRate";
+import CurrencyInputField from "./currencyInputField";
+import CurrencySelector from "./currencySelector";
+import CurrencyRate from "./currencyRate";
 import { loadCurrencyConversion } from "./actions/currencyConversionAction";
-import { fromCurrency, toCurrency } from "./actions/fromToCurrencyAction";
 
 const mapStateToProps = state => ({
   ...state
 });
 
 const mapDispatchToProps = {
-  loadCurrencyConversion,
-  fromCurrency,
-  toCurrency
+  loadCurrencyConversion
 };
 
 const containerStyle = {
@@ -30,7 +27,7 @@ const converterStyle = {
   flexDirection: "row"
 };
 
-class CurrencyConvertor extends Component {
+export class CurrencyConvertor extends Component {
   componentDidMount() {
     this.props.loadCurrencyConversion("EUR,GBP,USD");
     this.dataPolling = setInterval(() => {
@@ -41,12 +38,6 @@ class CurrencyConvertor extends Component {
   componentWillUnmount() {
     clearInterval(this.dataPolling);
   }
-
-  changeHandler = event => {
-    const name = event.target.name;
-    const value = event.target.value;
-    console.log(name, value);
-  };
 
   render() {
     const { currencyConvertorReducer } = this.props;
