@@ -7,3 +7,7 @@ React, Redux-Thunk based currency converter component.
 npm i
 
 npm start
+
+# TO TEST
+
+npm test
