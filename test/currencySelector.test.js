@@ -1,5 +1,5 @@
 import React from "react";
-import { configure, shallow } from "enzyme";
+import { configure, shallow, render } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
 import { CurrencySelector } from "../src/currencySelector";
@@ -29,6 +29,19 @@ describe("CurrencySelector Component", () => {
         />
       );
       expect(wrapper.exists()).toBe(true);
+    });
+    it("should render the correct data", () => {
+      const wrapper = render(
+        <CurrencySelector
+          fromCurrency={mockLoginfn}
+          fromCurrency={mockLoginfn}
+          options={mockProps.options}
+          label={mockProps.label}
+          name={mockProps.name}
+          value={mockProps.value}
+        />
+      );
+      expect(wrapper.find("option")).toHaveLength(3);
     });
   });
 });

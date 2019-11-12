@@ -39,7 +39,7 @@ export default class CurrencyRate extends Component {
     const message = `1 ${fromCurrency} = ${rate} ${toCurrency}`;
     return (
       <div style={rateContainer}>
-        <p style={rateStyle}>{message}</p>
+        <p className="msg" style={rateStyle}>{message}</p>
       </div>
     );
   }

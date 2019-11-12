@@ -11,6 +11,7 @@ exports[`Check CurrencyRate component snapshots CurrencyRate component snapshot 
   }
 >
   <p
+    className="msg"
     style={
       Object {
         "color": "#00b9ff",
